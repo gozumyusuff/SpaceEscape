@@ -312,7 +312,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'oyunun adi
+  m_text: 'space escape
+
 
 '
   m_isRightToLeft: 0
