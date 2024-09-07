@@ -7,7 +7,8 @@ public class GameOverManager : MonoBehaviour
 {
     public static Action<Vector3> GameOverEvent;
 
-    //TODO:  UI MANAGER can open close canvases
+    public AdManager ad;
+    
     public GameObject gameOverPanel;
 
     private void OnEnable()
@@ -27,8 +28,10 @@ public class GameOverManager : MonoBehaviour
     IEnumerator OpenPanelWithDelay()
     {
         yield return new WaitForSeconds(2);
+        ad.LoadInterstitialAd();
+        ad.ShowInterstitialAd();
         gameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f;   
     }
 
     public void RestartGame()
